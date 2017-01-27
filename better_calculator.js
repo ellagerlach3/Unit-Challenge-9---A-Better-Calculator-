@@ -1,4 +1,4 @@
-var currentInput = "0";
+var current_input = "0";
 var memory = "0";
 var operator = 0;
 // Helper function for displaying the current input
@@ -125,20 +125,20 @@ function controlLength() {
 }
 
 function sine() {
-    var roundSin = Math.sin(currentInput);
-    currentInput = roundSin.toFixed(10);
+    var round_sin = Math.sin(currentInput);
+    currentInput = round_sin.toFixed(10);
     displayCurrentInput();
 }
 
 function cosine() {
-    var roundCosine = Math.cos(currentInput);
-    currentInput = roundCosine.toFixed(10);
+    var round_cosine = Math.cos(currentInput);
+    currentInput = round_cosine.toFixed(10);
     displayCurrentInput();
 }
 
 function tangent() {
-    var roundTangent = Math.tan(currentInput);
-    currentInput = roundTangent.toFixed(10);
+    var round_tangent = Math.tan(currentInput);
+    currentInput = round_tangent.toFixed(10);
     displayCurrentInput();
 }
 
@@ -148,46 +148,46 @@ function pi() {
 }
 
 function degreeSine() {
-    var roundDegreeSine = Math.sin((currentInput * (Math.PI / 180)));
-    currentInput = roundDegreeSine.toFixed(10);
+    var round_degree_sine = Math.sin((currentInput * (Math.PI / 180)));
+    currentInput = round_degree_sine.toFixed(10);
     displayCurrentInput();
 }
 
 function degreeCosine() {
-    var roundDegreeCosine = Math.cos((currentInput * (Math.PI / 180)));
-    currentInput = roundDegreeCosine.toFixed(10)
+    var round_degree_cosine = Math.cos((currentInput * (Math.PI / 180)));
+    currentInput = round_degree_cosine.toFixed(10)
     displayCurrentInput();
 }
 
 function degreeTangent() {
-    var roundDegreeTangent = Math.tan((currentInput * (Math.PI / 180)));
-    currentInput = roundDegreeTangent.toFixed(10);
+    var round_degree_tangent = Math.tan((currentInput * (Math.PI / 180)));
+    currentInput = round_degree_tangent.toFixed(10);
     displayCurrentInput();
 }
-var memvalue;
+var mem_value;
 
 function memoryStore() {
-    memvalue = document.getElementById('screen').value;
+    mem_value = document.getElementById('screen').value;
 }
 
 function memoryRecall() {
-    currentInput = memvalue;
+    currentInput = mem_value;
     displayCurrentInput();
 }
 
 function memoryPlus() {
-    currentInput = parseInt(memvalue) + parseInt(currentInput);
+    currentInput = parseInt(mem_value) + parseInt(currentInput);
     displayCurrentInput();
 }
 
 function memoryMinus() {
-    currentInput = parseInt(memvalue) - parseInt(currentInput);
+    currentInput = parseInt(mem_value) - parseInt(currentInput);
     displayCurrentInput();
 }
 
 function memoryClear() {
-    memvalue = "0";
-    currentInput = memvalue;
+    mem_value = "0";
+    currentInput = mem_value;
     displayCurrentInput();
 }
 
