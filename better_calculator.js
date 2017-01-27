@@ -6,9 +6,7 @@ var operator = 0;
 
 /**
  * Helper function for displaying the current input
- *
- * @param ...
- * @return .....
+ * @author Steve Temple
  */
 function displayCurrentInput()
 {
@@ -17,9 +15,8 @@ function displayCurrentInput()
 
 /**
  * Adds a digit to the current input
- *
- * @param ...
- * @return .....
+ * @author Nick Tanaka
+ * @param {number} dig      This is the digit that the user types into the calculator text box
  */
 function addDigit(dig)
 {
@@ -36,9 +33,7 @@ function addDigit(dig)
 
 /**
  * Adds a decimal to the current input
- *
- * @param ...
- * @return .....
+ * @author Nick Tanaka
  */
 function addDecimal()
 {
@@ -60,9 +55,7 @@ function addDecimal()
 
 /**
  * Clears everything.
- *
- * @param ...
- * @return .....
+ * @author Nick Tanaka
  */
 function allClear()
 {
@@ -74,13 +67,12 @@ function allClear()
 
 /**
  * Stores the last operator pushed for multiply, divide, add, or subtract.
- *
- * @param ...
- * @return .....
+ * @author Nick Tanaka
+ * @param op        This is the mathematical operation that the user chooses to use by pressing a button with one of the four operations
  */
 function storeOperator(op)
 {
-    if (op.indexOf("") > -1)
+    if (op.indexOf("*") > -1)
     {
         operator = 1;
     }; //codes for
@@ -103,9 +95,7 @@ function storeOperator(op)
 
 /**
  * Calculate using operator, the memory and what is current
- *
- * @param ...
- * @return .....
+ * @author Nick Tanaka
  */
 function calculate()
 {
@@ -136,9 +126,7 @@ function calculate()
 
 /**
  * Change the sign of the current input
- *
- * @param ...
- * @return .....
+ * @author Nick Tanaka
  */
 function changeSign()
 {
@@ -148,9 +136,7 @@ function changeSign()
 
 /**
  * Clear the current input back to 0
- *
- * @param ...
- * @return .....
+ * @author Nick Tanaka
  */
 function clearCurrent()
 {
@@ -160,9 +146,7 @@ function clearCurrent()
 
 /**
  * Change the current input to a percentage
- *
- * @param ...
- * @return .....
+ * @author Nick Tanaka
  */
 function percentage()
 {
@@ -172,9 +156,7 @@ function percentage()
 
 /**
  * Calculate the factorial of the current input
- *
- * @param ...
- * @return .....
+ * @author Nick Tanaka
  */
 function factorial()
 {
@@ -189,9 +171,7 @@ function factorial()
 
 /**
  * Calculate the square of the current input
- *
- * @param ...
- * @return .....
+ * @author Nick Tanaka
  */
 function square()
 {
@@ -201,9 +181,7 @@ function square()
 
 /**
  * Calculate the square root of the current input
- *
- * @param ...
- * @return .....
+ * @author Nick Tanaka
  */
 function squareRoot()
 {
@@ -213,9 +191,7 @@ function squareRoot()
 
 /**
  * Calculate the inverse of the current input
- *
- * @param ...
- * @return .....
+ * @author Nick Tanakat
  */
 function inverse()
 {
@@ -224,10 +200,8 @@ function inverse()
 }
 
 /**
- * Description...
- *
- * @param ...
- * @return .....
+ * Prevents the user from inputting more than 17 values into the calculator text box
+ * @author Nick Tanaka
  */
 function controlLength()
 {
@@ -242,10 +216,8 @@ function controlLength()
 }
 
 /**
- * Description...
- *
- * @param ...
- * @return .....
+ * Finds the sine of the current input
+ * @author Nick Tanaka
  */
 function sine()
 {
@@ -255,10 +227,8 @@ function sine()
 }
 
 /**
- * Description...
- *
- * @param ...
- * @return .....
+ * Finds the cosine of the current input
+ * @author Nick Tanaka
  */
 function cosine()
 {
@@ -268,10 +238,8 @@ function cosine()
 }
 
 /**
- * Description...
- *
- * @param ...
- * @return .....
+ * Finds the tangent of the current input
+ * @author Nick Tanaka
  */
 function tangent()
 {
@@ -281,10 +249,8 @@ function tangent()
 }
 
 /**
- * Description...
- *
- * @param ...
- * @return .....
+ * Uses JavaScript's built-in Math.PI value to return a value for Pi
+ * @author Nick Tanaka
  */
 function pi()
 {
@@ -293,10 +259,8 @@ function pi()
 }
 
 /**
- * Description...
- *
- * @param ...
- * @return .....
+ * Finds the sine of the current input but returns the value in degrees
+ * @author Nick Tanaka
  */
 function degreeSine()
 {
@@ -306,10 +270,8 @@ function degreeSine()
 }
 
 /**
- * Description...
- *
- * @param ...
- * @return .....
+ * Finds the cosine of the current input but retuns the value in degrees
+ * @author Nick Tanaka
  */
 function degreeCosine()
 {
@@ -319,10 +281,8 @@ function degreeCosine()
 }
 
 /**
- * Description...
- *
- * @param ...
- * @return .....
+ * Finds the tangent of the current input but returns the value in degrees
+ * @author Nick Tanaka
  */
 function degreeTangent() {
     var round_degree_tangent = Math.tan((currentInput * (Math.PI / 180)));
@@ -332,10 +292,8 @@ function degreeTangent() {
 var mem_value;
 
 /**
- * Description...
- *
- * @param ...
- * @return .....
+ * Stores a value that the user wants to save for future calculator operations
+ * @author Nick Tanaka
  */
 function memoryStore()
 {
@@ -343,10 +301,8 @@ function memoryStore()
 }
 
 /**
- * Description...
- *
- * @param ...
- * @return .....
+ * Recalls the value that was previously stored by the user with the memoryStore() function
+ * @author Nick Tanaka
  */
 function memoryRecall()
 {
@@ -355,10 +311,8 @@ function memoryRecall()
 }
 
 /**
- * Description...
- *
- * @param ...
- * @return .....
+ * Adds the current input value to the value that was prevously stored in the memoryStore() function
+ * @author Nick Tanaka
  */
 function memoryPlus()
 {
@@ -367,10 +321,8 @@ function memoryPlus()
 }
 
 /**
- * Description...
- *
- * @param ...
- * @return .....
+ * Subtracts the current input value from the value that was previously stored in the memoryStore() function
+ * @author Nick Tanaka
  */
 function memoryMinus()
 {
@@ -379,10 +331,8 @@ function memoryMinus()
 }
 
 /**
- * Description...
- *
- * @param ...
- * @return .....
+ * Clears the value that was previously stored in the memoryStore() function
+ * @author Nick Tanaka
  */
 function memoryClear()
 {
@@ -392,10 +342,8 @@ function memoryClear()
 }
 
 /**
- * Description...
- *
- * @param ...
- * @return .....
+ * Finds the value of 10 to the power of the current input
+ * @author Nick Tanaka
  */
 function baseTen()
 {
