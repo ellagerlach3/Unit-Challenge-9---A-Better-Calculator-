@@ -4,13 +4,23 @@ var memory = "0";
 
 var operator = 0;
 
-// Helper function for displaying the current input
+/**
+ * Helper function for displaying the current input
+ *
+ * @param ...
+ * @return .....
+ */
 function displayCurrentInput()
 {
     document.getElementById('screen').value = currentInput;
 }
 
-// Adds a digit to the current input
+/**
+ * Adds a digit to the current input
+ *
+ * @param ...
+ * @return .....
+ */
 function addDigit(dig)
 {
     if ((eval(currentInput) == 0) && (currentInput.indexOf(".") == -1))
@@ -24,7 +34,12 @@ function addDigit(dig)
     displayCurrentInput();
 }
 
-// Adds a decimal to the current input
+/**
+ * Adds a decimal to the current input
+ *
+ * @param ...
+ * @return .....
+ */
 function addDecimal()
 {
     if (currentInput.length == 0)
@@ -43,7 +58,12 @@ function addDecimal()
     displayCurrentInput();
 }
 
-// Clears everything.
+/**
+ * Clears everything.
+ *
+ * @param ...
+ * @return .....
+ */
 function allClear()
 {
     currentInput = "0";
@@ -52,7 +72,12 @@ function allClear()
     displayCurrentInput();
 }
 
-// Stores the last operator pushed for multiply, divide, add, or subtract.
+/**
+ * Stores the last operator pushed for multiply, divide, add, or subtract.
+ *
+ * @param ...
+ * @return .....
+ */
 function storeOperator(op)
 {
     if (op.indexOf("") > -1)
@@ -76,7 +101,12 @@ function storeOperator(op)
     displayCurrentInput();
 }
 
-// Calculate using operator, the memory and what is current
+/**
+ * Calculate using operator, the memory and what is current
+ *
+ * @param ...
+ * @return .....
+ */
 function calculate()
 {
     if (operator == 1)
@@ -104,28 +134,48 @@ function calculate()
     displayCurrentInput();
 }
 
-// Change the sign of the current input
+/**
+ * Change the sign of the current input
+ *
+ * @param ...
+ * @return .....
+ */
 function changeSign()
 {
     currentInput = (currentInput - 1);
     displayCurrentInput();
 }
 
-// Clear the current input back to 0
+/**
+ * Clear the current input back to 0
+ *
+ * @param ...
+ * @return .....
+ */
 function clearCurrent()
 {
     currentInput = "0";
     displayCurrentInput();
 }
 
-// Change the current input to a percentage
+/**
+ * Change the current input to a percentage
+ *
+ * @param ...
+ * @return .....
+ */
 function percentage()
 {
     currentInput = (currentInput / 100)
     displayCurrentInput();
 }
 
-// Calculate the factorial of the current input
+/**
+ * Calculate the factorial of the current input
+ *
+ * @param ...
+ * @return .....
+ */
 function factorial()
 {
     var result = 1;
@@ -137,27 +187,48 @@ function factorial()
     displayCurrentInput();
 }
 
-// Calculate the square of the current input
+/**
+ * Calculate the square of the current input
+ *
+ * @param ...
+ * @return .....
+ */
 function square()
 {
     currentInput = Math.pow(currentInput, 2);
     displayCurrentInput();
 }
 
-// Calculate the square root of the current input
+/**
+ * Calculate the square root of the current input
+ *
+ * @param ...
+ * @return .....
+ */
 function squareRoot()
 {
     currentInput = Math.pow(currentInput, 0.5);
     displayCurrentInput();
 }
 
-// Calculate the inverse of the current input
+/**
+ * Calculate the inverse of the current input
+ *
+ * @param ...
+ * @return .....
+ */
 function inverse()
 {
     currentInput = Math.pow(currentInput, -1);
     displayCurrentInput();
 }
 
+/**
+ * Description...
+ *
+ * @param ...
+ * @return .....
+ */
 function controlLength()
 {
     if (currentInput.length >= 17)
@@ -170,6 +241,12 @@ function controlLength()
     }
 }
 
+/**
+ * Description...
+ *
+ * @param ...
+ * @return .....
+ */
 function sine()
 {
     var round_sin = Math.sin(currentInput);
@@ -177,6 +254,12 @@ function sine()
     displayCurrentInput();
 }
 
+/**
+ * Description...
+ *
+ * @param ...
+ * @return .....
+ */
 function cosine()
 {
     var round_cosine = Math.cos(currentInput);
@@ -184,6 +267,12 @@ function cosine()
     displayCurrentInput();
 }
 
+/**
+ * Description...
+ *
+ * @param ...
+ * @return .....
+ */
 function tangent()
 {
     var round_tangent = Math.tan(currentInput);
@@ -191,12 +280,24 @@ function tangent()
     displayCurrentInput();
 }
 
+/**
+ * Description...
+ *
+ * @param ...
+ * @return .....
+ */
 function pi()
 {
     currentInput = Math.PI;
     displayCurrentInput();
 }
 
+/**
+ * Description...
+ *
+ * @param ...
+ * @return .....
+ */
 function degreeSine()
 {
     var round_degree_sine = Math.sin((currentInput * (Math.PI / 180)));
@@ -204,6 +305,12 @@ function degreeSine()
     displayCurrentInput();
 }
 
+/**
+ * Description...
+ *
+ * @param ...
+ * @return .....
+ */
 function degreeCosine()
 {
     var round_degree_cosine = Math.cos((currentInput * (Math.PI / 180)));
@@ -211,6 +318,12 @@ function degreeCosine()
     displayCurrentInput();
 }
 
+/**
+ * Description...
+ *
+ * @param ...
+ * @return .....
+ */
 function degreeTangent() {
     var round_degree_tangent = Math.tan((currentInput * (Math.PI / 180)));
     currentInput = round_degree_tangent.toFixed(10);
@@ -218,29 +331,59 @@ function degreeTangent() {
 }
 var mem_value;
 
+/**
+ * Description...
+ *
+ * @param ...
+ * @return .....
+ */
 function memoryStore()
 {
     mem_value = document.getElementById('screen').value;
 }
 
+/**
+ * Description...
+ *
+ * @param ...
+ * @return .....
+ */
 function memoryRecall()
 {
     currentInput = mem_value;
     displayCurrentInput();
 }
 
+/**
+ * Description...
+ *
+ * @param ...
+ * @return .....
+ */
 function memoryPlus()
 {
     currentInput = parseInt(mem_value) + parseInt(currentInput);
     displayCurrentInput();
 }
 
+/**
+ * Description...
+ *
+ * @param ...
+ * @return .....
+ */
 function memoryMinus()
 {
     currentInput = parseInt(mem_value) - parseInt(currentInput);
     displayCurrentInput();
 }
 
+/**
+ * Description...
+ *
+ * @param ...
+ * @return .....
+ */
 function memoryClear()
 {
     mem_value = "0";
@@ -248,6 +391,12 @@ function memoryClear()
     displayCurrentInput();
 }
 
+/**
+ * Description...
+ *
+ * @param ...
+ * @return .....
+ */
 function baseTen()
 {
     currentInput = Math.pow(10, currentInput);
