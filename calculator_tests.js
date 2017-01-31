@@ -28,3 +28,10 @@ QUnit.test( "Inverse test", function ( assert ) {
     inverse();
     assert.equal(document.getElementById("screen").value, "0.2", "Passed - Expected 0.2");
 });
+// Test for finding square root
+QUnit.test( "Square root test", function ( assert ) {
+    allClear();
+    addDigit('4');
+    squareRoot();
+    assert.equal(document.getElementById("screen").value, "2", "Passed - Expected 2");
+});
