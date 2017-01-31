@@ -1,0 +1,28 @@
+.container > div {
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    width: 315px;
+}
+
+.ellanick {
+    text-align: center
+}
+
+.ellanick > input {
+    text-align: left;
+}
+
+.btn-group {
+    margin: auto;
+    width: 250px;
+}
+
+.nickella > div {
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    width: 350px;
+}

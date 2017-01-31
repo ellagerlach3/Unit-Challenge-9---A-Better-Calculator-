@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="better_calculator.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+    div {
+        border: solid 1px white;
+        color: navy;
+        background-color: white;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    type="text/css"> body {
+        text-align: center;
+    }
+</style>
+
+<head>
+    <title>Calcuator Starter App</title>
+    <script src="better_calculator.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li> <a href="/better_radiancalculator.html">Radian Mode</a></li>
+    </ul>
+    <h1>Calculator App</h1>
+    <form>
+        <p>
+            <div class="ellanick">
+                <input type="text" id="screen" maxlength="30" align="center" style="text-align: right">
+                <div/>
+                <h4>Degree Mode</h4>
+                <p/>
+                <p>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-primary btn-lg" onclick="allClear()">AC</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-primary btn-lg" onclick="clearCurrent()">C</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-primary btn-lg" onclick="percentage()">%</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-primary btn-lg" onclick="inverse()">1/x</button>
+                            </div>
+                        </div>
+                    </div>
+                    <p/>
+                    <p>
+                        <div class="nickella">
+                            <button type="button" class="btn btn-success btn-lg" onclick="memoryStore()">ms</button>
+                            <button type="button" class="btn btn-success btn-lg" onclick="memoryClear()">mc</button>
+                            <button type="button" class="btn btn-success btn-lg" onclick="memoryPlus()">m+</button>
+                            <button type="button" class="btn btn-success btn-lg" onclick="memoryMinus()">m-</button>
+                            <button type="button" class="btn btn-success btn-lg" onclick="memoryRecall()">mr</button>
+                        </div>
+                        <p/>
+                        <p>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <button type="button" class="btn btn-warning btn-lg" onclick="degreeSine()">sin</button>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <button type="button" class="btn btn-warning btn-lg" onclick="degreeCosine()">cos</button>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <button type="button" class="btn btn-warning btn-lg" onclick="degreeTangent()">tan</button>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <button type="button" class="btn btn-warning btn-lg" onclick="pi()">π</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <p/>
+                            <p>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <button type="button" class="btn btn-info btn-lg" onclick="factorial()">x!</button>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <button type="button" class="btn btn-info btn-lg" onclick="square()">x^2</button>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <button type="button" class="btn btn-info btn-lg" onclick="squareRoot()">√x</button>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <button type="button" class="btn btn-danger btn-lg" onclick="storeOperator('/')">÷</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </p>
+                            <p>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <button type="button" class="btn btn-success btn-lg" onclick="addDigit('7')">7</button>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <button type="button" class="btn btn-success btn-lg" onclick="addDigit('8')">8</button>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <button type="button" class="btn btn-success btn-lg" onclick="addDigit('9')">9</button>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <button type="button" class="btn btn-danger btn-lg" onclick="storeOperator('*')">x</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p/>
+                                <p>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <button type="button" class="btn btn-success btn-lg" onclick="addDigit('4')">4</button>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <button type="button" class="btn btn-success btn-lg" onclick="addDigit('5')">5</button>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <button type="button" class="btn btn-success btn-lg" onclick="addDigit('6')">6</button>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <button type="button" class="btn btn-danger btn-lg" onclick="storeOperator('-')">-</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p/>
+                                    <p>
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <button type="button" class="btn btn-success btn-lg" onclick="addDigit('1')">1</button>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <button type="button" class="btn btn-success btn-lg" onclick="addDigit('2')">2</button>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <button type="button" class="btn btn-success btn-lg" onclick="addDigit('3')">3</button>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <button type="button" class="btn btn-danger btn-lg" onclick="storeOperator('+')">+</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p/>
+                                        <p>
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <button type="button" class="btn btn-info btn-lg" onclick="addDecimal()">.</button>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <button type="button" class="btn btn-success btn-lg" onclick="addDigit('0')">0</button>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <button type="button" class="btn btn-info btn-lg" onclick="changeSign()">+/-</button>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <button type="button" class="btn btn-warning btn-lg" onclick="calculate()">=</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p/> </form>
+</body>
+
+</html>
