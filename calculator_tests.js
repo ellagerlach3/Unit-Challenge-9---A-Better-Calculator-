@@ -21,3 +21,10 @@ QUnit.test( "Change sign test", function ( assert ) {
     changeSign();
     assert.equal(document.getElementById("screen").value, "-1", "Passed - Expected -1");
 });
+// Test for finding the inverse
+QUnit.test( "Inverse test", function ( assert ) {
+    allClear();
+    addDigit('5');
+    inverse();
+    assert.equal(document.getElementById("screen").value, "0.2", "Passed - Expected 0.2");
+});
