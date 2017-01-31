@@ -1,4 +1,4 @@
-var current_input = "0";
+var currentInput = "0";
 
 var memory = "0";
 
