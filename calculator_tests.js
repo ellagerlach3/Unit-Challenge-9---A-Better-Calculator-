@@ -35,3 +35,14 @@ QUnit.test( "Square root test", function ( assert ) {
     squareRoot();
     assert.equal(document.getElementById("screen").value, "2", "Passed - Expected 2");
 });
+// Test for clearing JUST current input, not the stored procedure
+QUnit.test( "Clear current input only test", function ( assert ) {
+    allClear();
+    addDigit('3');
+    storeOperator('+');
+    addDigit('5');
+    clearCurrent();
+    addDigit('2');
+    calculate();
+    assert.equal(document.getElementById("screen").value, "5", "Passed - Expected 5");
+});
