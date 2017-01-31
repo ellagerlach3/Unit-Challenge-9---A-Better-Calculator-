@@ -130,7 +130,7 @@ function calculate()
  */
 function changeSign()
 {
-    currentInput = (currentInput - 1);
+    currentInput = (currentInput * -1);
     displayCurrentInput();
 }
 
