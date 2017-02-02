@@ -74,3 +74,67 @@ QUnit.test( "Clear current input only test", function ( assert ) {
     calculate();
     assert.equal(document.getElementById("screen").value, "5", "Passed - Expected 5");
 });
+
+// Test for pi
+QUnit.test( "Pi test", function ( assert ) {
+    allClear();
+    addDigit('Math.PI');
+    pi();
+    assert.equal(document.getElementById("screen").value, "3.141592653589793", "Passed - Expected 3.141592653589793");
+});
+
+// Test for calculating the sine of a curent input in DEGREE mode
+QUnit.test( "Sine in DEGREE mode test", function ( assert ) {
+    allClear();
+    addDigit('3');
+    addDigit('0');
+    degreeSine();
+    assert.equal(document.getElementById("screen").value, "0.5000000000", "Passed - Expected 0.5000000000");
+});
+
+// Test for calculating the cosine of a current input in DEGREE mode
+QUnit.test( "Cosine in DEGREE mode test", function ( assert ) {
+    allClear();
+    addDigit('3');
+    addDigit('0');
+    degreeCosine();
+    assert.equal(document.getElementById("screen").value, "0.8660254038", "Passed - Expected 0.8660254038");
+});
+
+// Test for calculating the tangent of a current input in DEGREE mode
+QUnit.test( "Tangent in DEGREE mode test", function ( assert ) {
+    allClear();
+    addDigit('6');
+    addDigit('0');
+    degreeTangent();
+    assert.equal(document.getElementById("screen").value, "1.7320508076", "Passed - Expected 1.7320508076");
+});
+
+// Test for calculating the sine of a current input in RADIAN mode
+QUnit.test( "Sine in RADIAN mode test", function ( assert ) {
+    allClear();
+    addDigit('9');
+    addDigit('0');
+    sine();
+    assert.equal(document.getElementById("screen").value, "0.8939966636", "Passed - Expected 0.8939966636");
+});
+
+// Test for calculating the cosine of a current input in RADIAN mode
+QUnit.test( "Cosine in RADIAN mode test", function ( assert ) {
+    allClear();
+    addDigit('1');
+    addDigit('2');
+    addDigit('0');
+    cosine();
+    assert.equal(document.getElementById("screen").value, "0.8141809705", "Passed - Expected 0.8141809705");
+});
+
+// Test for calculating the tangent of a current input in RADIAN mode
+QUnit.test( "Tangent in RADIAN mode test", function ( assert ) {
+    allClear();
+    addDigit('1');
+    addDigit('8');
+    addDigit('0');
+    tangent();
+    assert.equal(document.getElementById("screen").value, "1.3386902104", "Passed - Expected 1.3386902104");
+});
