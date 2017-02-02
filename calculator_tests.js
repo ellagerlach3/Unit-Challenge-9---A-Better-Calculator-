@@ -15,6 +15,7 @@ QUnit.test( "Add decimal test", function( assert ) {
     assert.equal(document.getElementById("screen").value, "0.2", "Passed - Expected 0.2");
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 // Test for changing the current input to a percentage
 QUnit.test( "Percentage test", function( assert ) {
@@ -42,6 +43,8 @@ QUnit.test( "Calculating square test", function( assert ) {
 
 
 =======
+=======
+>>>>>>> origin/master
 // Test for changing the sign of the current input
 QUnit.test( "Change sign test", function ( assert ) {
     allClear();
@@ -74,4 +77,7 @@ QUnit.test( "Clear current input only test", function ( assert ) {
     calculate();
     assert.equal(document.getElementById("screen").value, "5", "Passed - Expected 5");
 });
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
