@@ -138,3 +138,14 @@ QUnit.test( "Tangent in RADIAN mode test", function ( assert ) {
     tangent();
     assert.equal(document.getElementById("screen").value, "1.3386902104", "Passed - Expected 1.3386902104");
 });
+
+// Test for when dividing by zero, an error message shows up
+QUnit.test( "Dividing by zero test", function ( assert ) {
+    allClear();
+    addDigit('9');
+    storeOperator('/');
+    addDigit('0');
+    calculate();
+    assert.equal(document.getElementById("screen").value, "ERROR DIVIDE BY 0", "Passed - Expected ERROR DIVIDE BY 0");
+});
+
