@@ -149,3 +149,40 @@ QUnit.test( "Dividing by zero test", function ( assert ) {
     assert.equal(document.getElementById("screen").value, "ERROR DIVIDE BY 0", "Passed - Expected ERROR DIVIDE BY 0");
 });
 
+// Test for using storing the last operator pushed for multiply, divide, add, or subtract.
+QUnit.test( "Storing mathematical operator test", function ( assert ) {
+    allClear();
+    addDigit('3');
+    storeOperator('*');
+    addDigit('7');
+    calculate();
+    assert.equal(document.getElementById("screen").value, "21", "Passed - Expected 21");
+    allClear();
+    addDigit('28');
+    storeOperator('/');
+    addDigit('7');
+    calculate();
+    assert.equal(document.getElementById("screen").value, "4", "Passed - Expected 4");
+    allClear();
+    addDigit('6');
+    storeOperator('+');
+    addDigit('9')
+    calculate();
+    assert.equal(document.getElementById("screen").value, "15", "Passed - Expected 15");
+    allClear();
+    addDigit('8');
+    storeOperator("-");
+    addDigit('3');
+    calculate();
+    assert.equal(document.getElementById("screen").value, "5", "Passed - Expected 5");
+    });
+
+// Test for calculating using operator, the memory and what is current
+QUnit.test( "Calculating test", function ( assert ) {
+    allClear();
+    addDigit('3');
+    storeOperator('+');
+    addDigit('8');
+    calculate();
+    assert.equal(document.getElementById("screen").value, "11", "Passed - Expected 11");
+    });
