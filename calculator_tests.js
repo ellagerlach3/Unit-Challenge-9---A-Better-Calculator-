@@ -149,3 +149,55 @@ QUnit.test( "Dividing by zero test", function ( assert ) {
     assert.equal(document.getElementById("screen").value, "ERROR DIVIDE BY 0", "Passed - Expected ERROR DIVIDE BY 0");
 });
 
+// Test for storing a value using the "ms" button
+QUnit.test( "Storing a value test", function ( assert ) {
+    allClear();
+    addDigit('5');
+    memoryStore();
+    assert.equal(mem_value, "5", "Passed - Expected 5");
+});
+
+// Test for recalling a value using the "mr" button
+QUnit.test( "Recalling a value test", function ( assert ) {
+    allClear();
+    addDigit('5');
+    memoryStore();
+    clearCurrent();
+    addDigit('5');
+    storeOperator('+');
+    memoryRecall();
+    calculate();
+    assert.equal(document.getElementById("screen").value, "10", "Passed - Expected 10");
+});
+
+// Test for adding thge current input to a stored value using the "m+" button
+QUnit.test( "Adding a stored value test", function ( assert ) {
+    allClear();
+    addDigit('5');
+    memoryStore();
+    clearCurrent();
+    addDigit('5');
+    memoryPlus();
+    assert.equal(document.getElementById("screen").value, "10", "Passed - Expected 10");
+});
+
+// Test for subtracting the current input from a stored value using the "m-" button
+QUnit.test( "Subtracting a stored value test", function ( assert ) {
+    allClear();
+     addDigit('5');
+    memoryStore();
+    clearCurrent();
+    addDigit('5');
+    memoryMinus();
+    assert.equal(document.getElementById("screen").value, "0", "Passed - Expected 0");
+});
+
+// Test for clearing the memory of the "ms" button
+QUnit.test( "Clearing value stored in ms button", function ( assert ) {
+     allClear();
+     addDigit('5');
+    memoryStore();
+    clearCurrent();
+    memoryClear();
+    assert.equal(mem_value, "0", "Passed - Expected 0");
+});
